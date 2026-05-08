@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - AI Pet Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="checkout-body">
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <main class="checkout-main container">
+    <a class="back-link" href="index.html">← Back to product</a>
+    <div class="checkout-grid">
+      <section class="checkout-form-card">
+        <span class="eyebrow">STEP 2 OF 3</span>
+        <h1>Fill Your Delivery Details</h1>
+        <p class="subtext">After this step, customer goes to payment and then reaches the success page.</p>
+
+        <form action="success.html" method="get" class="checkout-form">
+          <div class="form-grid">
+            <label>
+              Full Name
+              <input type="text" name="name" placeholder="Enter full name" required>
+            </label>
+            <label>
+              Mobile Number
+              <input type="tel" name="phone" placeholder="Enter mobile number" required>
+            </label>
+          </div>
+
+          <label>
+            Email Address
+            <input type="email" name="email" placeholder="Enter email address">
+          </label>
+
+          <label>
+            Full Address
+            <textarea name="address" rows="4" placeholder="House no, street, area, landmark" required></textarea>
+          </label>
+
+          <div class="form-grid">
+            <label>
+              City
+              <input type="text" name="city" placeholder="City" required>
+            </label>
+            <label>
+              State
+              <input type="text" name="state" placeholder="State" required>
+            </label>
+          </div>
+
+          <div class="form-grid">
+            <label>
+              Pincode
+              <input type="text" name="pincode" placeholder="Pincode" required>
+            </label>
+            <label>
+              Quantity
+              <select name="qty">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="note-box">
+            <strong>Payment Note:</strong>
+            <p>Connect this button to Razorpay or your preferred gateway. For now, this demo moves to the success page so you can preview the complete UI flow.</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary full-btn">Continue to Payment</button>
+        </form>
+      </section>
+
+      <aside class="order-card">
+        <img src="assets/pet1.jpg" alt="AI Pet product">
+        <h2>AI Pet Companion</h2>
+        <p>Premium desktop AI gadget companion</p>
+        <div class="order-row"><span>Product Price</span><strong>₹6,999</strong></div>
+        <div class="order-row"><span>Shipping</span><strong>Free</strong></div>
+        <div class="order-row total"><span>Total</span><strong>₹6,999</strong></div>
+        <ul class="mini-points">
+          <li>Prepaid order flow</li>
+          <li>Expected delivery: 12–15 days</li>
+          <li>1 year warranty</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
