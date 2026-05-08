@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "aipetstore-amazon-style-final",
+  "name": "aipetstore-smart-features-payment",
+  "main": "worker.js",
   "compatibility_date": "2026-05-08",
   "assets": {
     "directory": "."

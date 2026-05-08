@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Checkout — AI PET</title>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
       <section class="glass form-panel">
         <h1>Customer & Shipping Details</h1>
         <p>Please enter your details to place the order.</p>
-        <form action="success.html" class="checkout-form">
+        <form class="checkout-form" id="checkoutForm">
           <input type="hidden" id="selectedEdition" name="edition" value="boy" />
           <label>Full Name<input type="text" placeholder="Enter your full name" required></label>
           <div class="two"><label>Mobile Number<input type="tel" placeholder="Enter mobile number" required></label><label>Email Address<input type="email" placeholder="Enter email address"></label></div>
@@ -40,12 +41,13 @@
 
           <h2>Payment Method</h2>
           <div class="pay-options">
-            <label class="pay active"><input type="radio" checked name="pay"> UPI <span>GPay / PhonePe / Paytm</span></label>
-            <label class="pay"><input type="radio" name="pay"> Credit / Debit Card <span>Visa / Mastercard / RuPay</span></label>
-            <label class="pay"><input type="radio" name="pay"> Net Banking <span>100+ banks</span></label>
-            <label class="pay"><input type="radio" name="pay"> Cash on Delivery <span>Available</span></label>
-          </div>
-          <div class="action-row"><a href="index.html" class="ghost-btn">← Back to Cart</a><button class="buy-btn" type="submit">Proceed to Payment</button></div>
+            <label class="pay active"><input type="radio" checked name="pay" value="upi"> UPI <span>GPay / PhonePe / Paytm</span></label>
+            <label class="pay"><input type="radio" name="pay" value="card"> Credit / Debit Card <span>Visa / Mastercard / RuPay</span></label>
+            <label class="pay"><input type="radio" name="pay" value="netbanking"> Net Banking <span>100+ banks</span></label>
+                      </div>
+          <div class="action-row"><a href="index.html" class="ghost-btn">← Back to Cart</a><button class="buy-btn" id="payNowBtn" type="submit">Proceed to Payment</button></div>
+          <p class="payment-note">Online payment only. Cash on Delivery is not available.</p>
+          <p class="payment-status" id="paymentStatus"></p>
         </form>
       </section>
 

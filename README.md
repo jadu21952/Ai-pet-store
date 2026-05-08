@@ -1,49 +1,37 @@
-# AI PET Store — Amazon Style Final
+# AI PET Store — Razorpay Test Mode Ready
 
-This is the final version with Amazon-style product image switching.
+This version includes:
+- Smart Features section
+- Box images switching for Boy/Girl editions
+- Cash on Delivery removed
+- Razorpay test-mode payment starts only after address/details are filled on checkout page
+- Payment success goes to success page
+- Payment cancel/failure goes to failed page
 
-## What is included
-- Boy Edition with 6 separate images
-- Girl Edition with 6 separate images
-- Click Boy/Girl edition to switch the whole gallery
-- Click thumbnails to change the main image
-- Updated price: ₹3,999
-- Old price: ₹10,999
-- All files are in the root folder (no assets folder)
+## Important
+For safety, Razorpay secrets are NOT embedded in these files.
+Set them as Cloudflare Worker secrets before deploy.
 
-## Image files
-Boy edition:
-- boy-1.jpg
-- boy-2.jpg
-- boy-3.jpg
-- boy-4.jpg
-- boy-5.jpg
-- boy-6.jpg
-
-Girl edition:
-- girl-1.jpg
-- girl-2.jpg
-- girl-3.jpg
-- girl-4.jpg
-- girl-5.jpg
-- girl-6.jpg
+## Set Razorpay secrets
+```bash
+npx wrangler secret put RAZORPAY_KEY_ID
+npx wrangler secret put RAZORPAY_KEY_SECRET
+```
 
 ## Deploy
 ```bash
-npx wrangler login
 npx wrangler deploy
 ```
 
+## Files to replace if you already have your own images
+Replace these files:
+- index.html
+- checkout.html
+- success.html
+- failed.html
+- style.css
+- script.js
+- worker.js
+- wrangler.jsonc
 
-Box image names:
-- boy-box-device.jpg
-- boy-box-cable.jpg
-- boy-box-guide.jpg
-- boy-box-card.jpg
-- girl-box-device.jpg
-- girl-box-cable.jpg
-- girl-box-guide.jpg
-- girl-box-card.jpg
-
-
-Updated with smart feature cards section and custom shipping copy.
+You can keep your existing product images if their names are unchanged.
