@@ -1,22 +1,20 @@
-# AI Pet Store - Updated Single Product Website
+# AI PET Mockup Style Website
+
+This version is redesigned to match the futuristic AI PET mockup style more closely.
 
 ## Files
 - `index.html` - main landing page
-- `checkout.html` - address details page
-- `success.html` - payment success page
-- `style.css` - full styling
-- `assets/pet1.jpg` - main product image
+- `checkout.html` - address + payment page
+- `success.html` - order confirmation page
+- `style.css` - full design styles
+- `assets/pet1.jpg` - product image
 - `wrangler.jsonc` - Cloudflare Workers static assets config
 
-## How to edit
-- Replace `assets/pet1.jpg` with your real product image
-- Update price and text directly in `index.html` and `checkout.html`
-- Replace WhatsApp number in `success.html`
-- Add policy links in footer
+## Edit image
+Keep the image at:
+`assets/pet1.jpg`
 
-## Cloudflare deploy
-Use this in repo folder:
-
+## Deploy
 ```bash
 npx wrangler login
 npx wrangler deploy

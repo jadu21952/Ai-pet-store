@@ -3,46 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Order Confirmed - AI Pet Store</title>
+  <title>Payment Successful — AI PET</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="checkout-body">
-  <div class="bg-glow glow-1"></div>
-  <div class="bg-glow glow-2"></div>
-  <main class="success-main container">
-    <div class="success-card">
-      <div class="success-icon">✓</div>
-      <span class="eyebrow">STEP 3 OF 3</span>
-      <h1>Payment Successful</h1>
-      <p>Your order has been confirmed successfully. Customer details are received and the next update can be sent by WhatsApp, email, or admin panel later.</p>
-
-      <div class="success-grid">
-        <div class="success-box">
-          <span>Order ID</span>
-          <strong>AI-PET-2026-1048</strong>
-        </div>
-        <div class="success-box">
-          <span>Payment Status</span>
-          <strong>Confirmed</strong>
-        </div>
-        <div class="success-box">
-          <span>Delivery Estimate</span>
-          <strong>12–15 Days</strong>
-        </div>
-        <div class="success-box">
-          <span>Support</span>
-          <strong>WhatsApp Help</strong>
-        </div>
-      </div>
-
-      <div class="success-actions">
-        <a href="index.html" class="btn btn-secondary">Back to Home</a>
-        <a href="https://wa.me/919999999999" class="btn btn-primary">Contact on WhatsApp</a>
-      </div>
+<body class="checkout-page">
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <main class="container success-wrap">
+    <div class="steps glass">
+      <div class="step done">Step 1 <span>Choose Your AI Pet</span></div>
+      <div class="step done">Step 2 <span>Shipping & Payment</span></div>
+      <div class="step active">Step 3 <span>Confirmation</span></div>
     </div>
+
+    <section class="glass success-panel">
+      <div class="success-hero"><div class="success-mark">✓</div><div><h1>Payment Successful!</h1><p>Your AI PET order is confirmed. Thank you for choosing your new smart companion.</p></div></div>
+      <div class="order-meta">
+        <div><span>Order ID</span><strong>AIPET-2026-00987</strong></div>
+        <div><span>Payment ID</span><strong>pay_9X8KLMN2PQR</strong></div>
+        <div><span>Date & Time</span><strong>May 08, 2026 · 7:24 PM</strong></div>
+        <div><span>Status</span><strong>Confirmed</strong></div>
+      </div>
+      <div class="confirm-grid">
+        <div class="glass inner-card"><h2>Order Summary</h2><div class="summary-item"><img src="assets/pet1.jpg" alt="AI Pet"><div><strong>AI PET Smart Companion</strong><p>Includes AI PET device, USB-C power cable and quick start guide.</p></div><b>₹9,999</b></div><div class="totals"><div><span>Shipping</span><strong>Free</strong></div><div class="grand"><span>Total Paid</span><strong>₹9,999</strong></div></div></div>
+        <div class="glass inner-card"><h2>Delivery Information</h2><p><strong>Estimated delivery:</strong> 3–7 business days</p><p><strong>Shipping method:</strong> Standard Shipping (Free)</p><p><strong>Support:</strong> WhatsApp +91 99999 99999</p></div>
+      </div>
+      <div class="success-actions"><a class="ghost-btn" href="index.html">Back to Home</a><a class="buy-btn" href="https://wa.me/919999999999">WhatsApp Support</a></div>
+    </section>
   </main>
 </body>
 </html>

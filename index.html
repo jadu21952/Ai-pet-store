@@ -3,212 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Pet Store</title>
-  <meta name="description" content="Meet your futuristic desktop AI pet companion with voice, smart chat, fun actions, and assistant features." />
+  <title>AI PET — Smart Desktop Companion</title>
+  <meta name="description" content="Modern single-product AI Pet store with premium dark UI, checkout flow, and deploy-ready static files." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-glow glow-1"></div>
-  <div class="bg-glow glow-2"></div>
-
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a href="#" class="brand">AI Pet Store</a>
-      <nav class="nav-links">
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="logo"><span class="logo-dot">◉</span> AI PET</a>
+      <nav>
+        <a href="#home">Home</a>
         <a href="#features">Features</a>
-        <a href="#how">What It Does</a>
+        <a href="#what">What It Does</a>
+        <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
-        <a href="checkout.html" class="nav-cta">Buy Now</a>
       </nav>
+      <a class="buy-btn small" href="checkout.html">Buy Now</a>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section id="home" class="hero section-first">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">FUTURISTIC DESKTOP COMPANION</span>
-          <h1>Bring Home a Smart <span>AI Pet</span> That Talks, Reacts & Assists</h1>
-          <p class="hero-text">A premium desk companion designed for conversation, fun interactions, reminders, and smart AI-powered assistance. Cute like a pet. Useful like a smart gadget.</p>
-          <div class="hero-actions">
-            <a href="checkout.html" class="btn btn-primary">Buy Now</a>
-            <a href="#features" class="btn btn-secondary">See Features</a>
+        <div class="hero-copy glass">
+          <span class="tag">YOUR DESKTOP AI COMPANION</span>
+          <h1>Meet Your Smart <span>AI Pet</span> Companion</h1>
+          <p class="lead">A cute desktop companion that talks, listens, learns and grows with you. It responds, entertains, reminds and keeps you company right on your desk.</p>
+          <div class="price-row">
+            <strong>₹9,999</strong>
+            <span class="old">₹16,999</span>
+            <span class="save">Save ₹7,000</span>
           </div>
-          <div class="trust-row">
-            <span>Secure Payment</span>
-            <span>1 Year Warranty</span>
-            <span>Premium Packaging</span>
+          <div class="pill-row">
+            <span>Free Shipping</span>
+            <span>7-Day Returns</span>
+            <span>1-Year Warranty</span>
+            <span>Secure Checkout</span>
+          </div>
+          <div class="hero-actions">
+            <a class="buy-btn" href="checkout.html">Buy AI PET Now →</a>
+            <div class="rating">★ ★ ★ ★ ★ <span>4.9/5 from 1,200+ happy owners</span></div>
           </div>
         </div>
+        <div class="hero-visual glass">
+          <div class="bubble">Hi! I'm here with you. 💙</div>
+          <img src="assets/pet1.jpg" alt="AI Pet" class="hero-img" />
+        </div>
+      </div>
+    </section>
 
-        <div class="hero-visual">
-          <div class="visual-card">
-            <img src="assets/pet1.jpg" alt="AI Pet product image" class="hero-image" />
-            <div class="price-card">
-              <p class="price-label">Launch Price</p>
-              <div class="price-line">
-                <span class="old-price">₹9,999</span>
-                <strong>₹6,999</strong>
-              </div>
-              <p class="shipping-note">Delivery in 12–15 days</p>
+    <section class="container dual-cards">
+      <article class="edition glass blue">
+        <img src="assets/pet1.jpg" alt="Boy edition" />
+        <div>
+          <h3>AI PET – Boy Edition</h3>
+          <p>Friendly, curious, and always ready to chat.</p>
+          <div class="mini-features"><span>Blue Lights</span><span>Playful Personality</span><span>Voice & Touch</span></div>
+          <div class="edition-bottom"><strong>₹9,999</strong><a href="checkout.html">Select Boy Edition</a></div>
+        </div>
+      </article>
+      <article class="edition glass pink">
+        <img src="assets/pet1.jpg" alt="Girl edition" />
+        <div>
+          <h3>AI PET – Girl Edition</h3>
+          <p>Warm, cheerful and your caring desk buddy.</p>
+          <div class="mini-features"><span>Soft Glow</span><span>Sweet Personality</span><span>Voice & Touch</span></div>
+          <div class="edition-bottom"><strong>₹9,999</strong><a href="checkout.html">Select Girl Edition</a></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="what" class="section">
+      <div class="container">
+        <h2 class="section-title">What AI PET Does</h2>
+        <div class="feature-grid six">
+          <div class="feature-card glass"><h3>Talks Naturally</h3><p>Have real conversations. It understands context and keeps chats going.</p></div>
+          <div class="feature-card glass"><h3>Responds Instantly</h3><p>Quick smart replies that feel human and keep you engaged.</p></div>
+          <div class="feature-card glass"><h3>Helps & Assists</h3><p>Answers questions, explains things and helps with daily tasks.</p></div>
+          <div class="feature-card glass"><h3>Learns Your Routine</h3><p>Adapts to your habits and preferences for a personal experience.</p></div>
+          <div class="feature-card glass"><h3>Reminds & Organizes</h3><p>Set reminders, check schedules and stay productive every day.</p></div>
+          <div class="feature-card glass"><h3>Emotional Companion</h3><p>Provides comfort, lifts your mood and is always there for you.</p></div>
+        </div>
+
+        <h2 class="section-title not-title">What AI PET Does <span>NOT</span> Do</h2>
+        <div class="warning-grid">
+          <div class="warning-card glass">Not a replacement for therapy, medical advice or professional judgement.</div>
+          <div class="warning-card glass">Needs internet for full features and real-time responses.</div>
+          <div class="warning-card glass">Not designed for emergencies or critical decisions.</div>
+          <div class="warning-card glass">Not a toy for very young children without adult supervision.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section compact-top">
+      <div class="container info-layout">
+        <div class="glass box-card">
+          <h2>What's in the Box</h2>
+          <div class="box-grid">
+            <div class="box-list">
+              <ul>
+                <li>1 × AI PET Device</li>
+                <li>1 × USB-C Power Cable</li>
+                <li>1 × Quick Start Guide</li>
+                <li>1 × Welcome Card</li>
+              </ul>
+            </div>
+            <div class="box-items">
+              <img src="assets/pet1.jpg" alt="AI Pet in box" />
+              <div class="mini-box">Cable</div>
+              <div class="mini-box">Quick Guide</div>
+              <div class="mini-box">Welcome Card</div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="feature-strip">
-      <div class="container strip-grid">
-        <div class="strip-item">Voice Interaction</div>
-        <div class="strip-item">Smart Chat</div>
-        <div class="strip-item">Fun Reactions</div>
-        <div class="strip-item">Daily Assistant</div>
-        <div class="strip-item">Desk Companion</div>
-      </div>
-    </section>
-
-    <section id="features" class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">WHY PEOPLE LIKE IT</span>
-          <h2>Made to Feel Premium, Useful and Alive</h2>
-          <p>Instead of looking like a normal toy, this AI Pet is positioned as a modern smart desktop companion.</p>
-        </div>
-        <div class="cards-grid">
-          <article class="info-card">
-            <h3>Smart Conversation</h3>
-            <p>Talk casually, ask basic questions, and enjoy natural-feeling responses and reactions.</p>
-          </article>
-          <article class="info-card">
-            <h3>Desk Buddy Feel</h3>
-            <p>Designed to sit on your desk and add personality to your workspace, study table, or room setup.</p>
-          </article>
-          <article class="info-card">
-            <h3>Fun Actions & Motion</h3>
-            <p>Interactive behavior, expressive reactions, and playful movements make it feel more alive.</p>
-          </article>
-          <article class="info-card">
-            <h3>Personal Reminder Support</h3>
-            <p>Helpful for simple reminders, lightweight assistance, and everyday engagement.</p>
-          </article>
-          <article class="info-card">
-            <h3>Premium Gift Appeal</h3>
-            <p>Looks like a premium gadget gift instead of a generic mass-market electronic toy.</p>
-          </article>
-          <article class="info-card">
-            <h3>Modern AI Styling</h3>
-            <p>Futuristic visuals, neon accents, and a tech-first product feel boost perceived value.</p>
-          </article>
+        <div class="side-stack">
+          <div class="glass side-card"><h3>Warranty</h3><p>1-Year limited warranty against manufacturing defects and issues.</p></div>
+          <div class="glass side-card"><h3>Shipping</h3><p>Fast shipping. Orders ship within 24–48 hours and arrive in 3–7 business days.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="how" class="section split-section">
-      <div class="container split-grid">
-        <div class="panel">
-          <span class="eyebrow">WHAT IT CAN DO</span>
-          <h2>What Your AI Pet Can Do</h2>
-          <ul class="check-list">
-            <li>Respond to voice prompts and simple commands</li>
-            <li>Act as a fun desktop companion during work or study</li>
-            <li>Provide light assistant-style interactions</li>
-            <li>React with expressive, playful behavior</li>
-            <li>Make your setup feel more futuristic and interactive</li>
-          </ul>
-        </div>
-        <div class="panel muted-panel">
-          <span class="eyebrow">IMPORTANT CLARITY</span>
-          <h2>What It Does Not Do</h2>
-          <ul class="check-list no-list">
-            <li>It is not a replacement for a human personal assistant</li>
-            <li>It does not guarantee perfect answers every time</li>
-            <li>It is not medical, legal, or financial advice software</li>
-            <li>Some smart features may depend on app, connectivity, or updates</li>
-            <li>It should be presented as a smart gadget companion, not exaggerated beyond reality</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">HOW BUYING WORKS</span>
-          <h2>Clean 3-Step Purchase Flow</h2>
-        </div>
-        <div class="timeline-grid">
-          <div class="timeline-card"><strong>1</strong><h3>Choose & Buy</h3><p>Customer lands on the page, checks the details, and clicks Buy Now.</p></div>
-          <div class="timeline-card"><strong>2</strong><h3>Fill Address Details</h3><p>Customer enters full name, phone, address, city, state and pincode on checkout page.</p></div>
-          <div class="timeline-card"><strong>3</strong><h3>Payment Success</h3><p>After successful payment, a clean confirmation page shows order details and next steps.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section testimonials">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">TRUST BUILDERS</span>
-          <h2>Why This Page Converts Better</h2>
-        </div>
-        <div class="cards-grid trust-grid">
-          <article class="quote-card"><p>“Looks more like a premium AI gadget than a normal toy product.”</p><span>— Product positioning</span></article>
-          <article class="quote-card"><p>“The page clearly explains what it does and what it doesn’t do, which builds trust.”</p><span>— Buyer clarity</span></article>
-          <article class="quote-card"><p>“Checkout flow is simple: product page → address details → payment success.”</p><span>— Conversion flow</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <div class="container faq-wrap">
-        <div class="section-head left">
-          <span class="eyebrow">FAQ</span>
-          <h2>Things Buyers Usually Ask</h2>
-        </div>
-        <div class="faq-list">
-          <details>
-            <summary>Is this a toy or a smart product?</summary>
-            <p>It is positioned as a smart AI desktop companion with entertainment and assistant-style appeal, not just a normal toy.</p>
-          </details>
-          <details>
-            <summary>Do I need internet for every feature?</summary>
-            <p>Some interactive or AI-linked features may depend on connectivity, app pairing, or software setup.</p>
-          </details>
-          <details>
-            <summary>How many days will delivery take?</summary>
-            <p>Expected delivery is 12–15 days depending on region and stock availability.</p>
-          </details>
-          <details>
-            <summary>Is cash on delivery available?</summary>
-            <p>No. The current setup is prepaid only to keep the process secure and clean.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cta-section">
-      <div class="container cta-box">
+    <section id="reviews" class="section compact-top">
+      <div class="container review-layout">
         <div>
-          <span class="eyebrow">READY TO ORDER?</span>
-          <h2>Make Your Desk Look Smarter</h2>
-          <p>Proceed to checkout, fill your details, and complete your payment in the next step.</p>
+          <h2 class="section-title left">Loved by Thousands</h2>
+          <div class="review-grid">
+            <article class="review-card glass"><div class="stars">★★★★★</div><p>AI PET keeps me company while I work and makes my day better. Super smart and so cute on my desk.</p><strong>Arjun P.</strong><span>Verified Buyer</span></article>
+            <article class="review-card glass"><div class="stars">★★★★★</div><p>The reminders and helpful answers are fantastic. I loved my routine in just a few days.</p><strong>Meera K.</strong><span>Verified Buyer</span></article>
+            <article class="review-card glass"><div class="stars">★★★★★</div><p>I got the edition for my daughter and she loves the glow quality, voice and support.</p><strong>David L.</strong><span>Verified Buyer</span></article>
+          </div>
         </div>
-        <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+        <div id="faq" class="glass faq-card">
+          <h2>Frequently Asked Questions</h2>
+          <details open><summary>Does AI PET require an internet connection?</summary><p>Yes, internet is required for live AI chat, synced reminders and cloud-based responses.</p></details>
+          <details><summary>Can AI PET understand my voice?</summary><p>Yes, it is designed for voice interaction and natural conversational prompts.</p></details>
+          <details><summary>What languages does AI PET support?</summary><p>You can start with English-first support and expand languages later.</p></details>
+          <details><summary>Can I turn off the lights or sound?</summary><p>Yes, those controls can be added inside your device/app settings flow.</p></details>
+          <details><summary>What is the warranty policy?</summary><p>1-year limited warranty for manufacturing issues. Physical damage is usually excluded.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact-top">
+      <div class="container cta glass">
+        <div class="cta-left">
+          <img src="assets/pet1.jpg" alt="AI Pet small" />
+          <div>
+            <h2>Ready to Bring Home Your AI Companion?</h2>
+            <p>Join thousands of happy users and experience smart companionship every day.</p>
+            <div class="pill-row"><span>Free Shipping</span><span>7-Day Returns</span><span>1-Year Warranty</span><span>Secure Checkout</span></div>
+          </div>
+        </div>
+        <div class="cta-right">
+          <div class="price-row small"><strong>₹9,999</strong><span class="old">₹16,999</span><span class="save">Save ₹7,000</span></div>
+          <a class="buy-btn" href="checkout.html">Buy AI PET Now →</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-grid">
-      <p>© 2026 AI Pet Store</p>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Shipping Policy</a>
-        <a href="#">Return Policy</a>
-        <a href="#">Contact Support</a>
+      <div>
+        <a href="index.html" class="logo"><span class="logo-dot">◉</span> AI PET</a>
+        <p>Your smart desktop companion that talks, listens, learns and grows with you.</p>
       </div>
+      <div><h4>Shop</h4><a href="checkout.html">Buy Now</a><a href="#features">Shipping Info</a><a href="#faq">Warranty</a></div>
+      <div><h4>Support</h4><a href="#faq">Help Center</a><a href="success.html">Track Your Order</a><a href="https://wa.me/919999999999">Contact Us</a></div>
+      <div><h4>Company</h4><a href="#">About AI PET</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
     </div>
   </footer>
 </body>
