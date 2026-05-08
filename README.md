@@ -44,3 +44,6 @@ Box image names:
 - girl-box-cable.jpg
 - girl-box-guide.jpg
 - girl-box-card.jpg
+
+
+Updated with smart feature cards section and custom shipping copy.
