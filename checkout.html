@@ -23,6 +23,7 @@
         <h1>Customer & Shipping Details</h1>
         <p>Please enter your details to place the order.</p>
         <form action="success.html" class="checkout-form">
+          <input type="hidden" id="selectedEdition" name="edition" value="boy" />
           <label>Full Name<input type="text" placeholder="Enter your full name" required></label>
           <div class="two"><label>Mobile Number<input type="tel" placeholder="Enter mobile number" required></label><label>Email Address<input type="email" placeholder="Enter email address"></label></div>
           <label>Address Line 1<input type="text" placeholder="House / Building / Street" required></label>
@@ -30,6 +31,12 @@
           <div class="three"><label>City<input type="text" placeholder="Enter city" required></label><label>State<input type="text" placeholder="Select state" required></label><label>Pincode<input type="text" placeholder="Enter pincode" required></label></div>
           <label>Country<input type="text" value="India"></label>
           <div class="check-note"><input type="checkbox" id="save"><label for="save">Save this address for faster checkout next time</label></div>
+
+          <h2>Selected Edition</h2>
+          <div class="edition-mini-selector">
+            <button class="mini-switch active" type="button" data-edition="boy">Boy Edition</button>
+            <button class="mini-switch" type="button" data-edition="girl">Girl Edition</button>
+          </div>
 
           <h2>Payment Method</h2>
           <div class="pay-options">
@@ -45,13 +52,19 @@
       <aside class="side-column">
         <div class="glass summary-card">
           <h2>Order Summary</h2>
-          <div class="summary-item"><img src="assets/pet1.jpg" alt="AI Pet"><div><strong>AI PET</strong><p>Your Smart AI Pet Companion</p></div><b>₹9,999</b></div>
-          <div class="totals"><div><span>Subtotal</span><strong>₹9,999</strong></div><div><span>Shipping</span><strong>₹0</strong></div><div><span>Discount</span><strong>-₹1,000</strong></div><div class="grand"><span>Total Amount</span><strong>₹8,999</strong></div></div>
+          <div class="summary-item"><img id="summaryImage" src="boy-1.jpg" alt="AI Pet"><div><strong id="summaryTitle">AI PET – Boy Edition</strong><p>Your Smart AI Pet Companion</p></div><b>₹3,999</b></div>
+          <div class="totals">
+            <div><span>MRP</span><strong>₹10,999</strong></div>
+            <div><span>Launch Discount</span><strong>-₹7,000</strong></div>
+            <div><span>Shipping</span><strong>₹0</strong></div>
+            <div class="grand"><span>Total Amount</span><strong>₹3,999</strong></div>
+          </div>
         </div>
         <div class="glass ship-card"><h3>Delivery Estimate</h3><p>Estimated delivery in 3–7 business days after dispatch.</p></div>
         <div class="glass secure-card"><h3>Safe. Secure. Trusted.</h3><ul><li>256-bit SSL encrypted checkout</li><li>100% secure payments</li><li>Easy returns and replacement</li><li>Customer support available</li></ul></div>
       </aside>
     </div>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI PET — Smart Desktop Companion</title>
-  <meta name="description" content="Modern single-product AI Pet store with premium dark UI, checkout flow, and deploy-ready static files." />
+  <meta name="description" content="Futuristic AI PET store with Amazon-style image switching for Boy and Girl editions." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -18,12 +18,12 @@
       <a href="index.html" class="logo"><span class="logo-dot">◉</span> AI PET</a>
       <nav>
         <a href="#home">Home</a>
-        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
         <a href="#what">What It Does</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="buy-btn small" href="checkout.html">Buy Now</a>
+      <a class="buy-btn small" href="checkout.html?edition=boy">Buy Now</a>
     </div>
   </header>
 
@@ -35,8 +35,8 @@
           <h1>Meet Your Smart <span>AI Pet</span> Companion</h1>
           <p class="lead">A cute desktop companion that talks, listens, learns and grows with you. It responds, entertains, reminds and keeps you company right on your desk.</p>
           <div class="price-row">
-            <strong>₹9,999</strong>
-            <span class="old">₹16,999</span>
+            <strong>₹3,999</strong>
+            <span class="old">₹10,999</span>
             <span class="save">Save ₹7,000</span>
           </div>
           <div class="pill-row">
@@ -46,36 +46,52 @@
             <span>Secure Checkout</span>
           </div>
           <div class="hero-actions">
-            <a class="buy-btn" href="checkout.html">Buy AI PET Now →</a>
+            <a class="buy-btn" id="heroBuyBtn" href="checkout.html?edition=boy">Buy AI PET Now →</a>
             <div class="rating">★ ★ ★ ★ ★ <span>4.9/5 from 1,200+ happy owners</span></div>
           </div>
         </div>
-        <div class="hero-visual glass">
+        <div class="hero-gallery glass">
           <div class="bubble">Hi! I'm here with you. 💙</div>
-          <img src="assets/pet1.jpg" alt="AI Pet" class="hero-img" />
+          <div class="gallery-panel">
+            <div class="thumb-column" id="thumbColumn"></div>
+            <div class="main-image-wrap">
+              <img src="boy-1.jpg" alt="AI Pet" class="hero-img" id="mainProductImage" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="container dual-cards">
-      <article class="edition glass blue">
-        <img src="assets/pet1.jpg" alt="Boy edition" />
+      <article class="edition glass blue edition-card active" data-edition="boy">
+        <img src="boy-1.jpg" alt="Boy edition" />
         <div>
           <h3>AI PET – Boy Edition</h3>
           <p>Friendly, curious, and always ready to chat.</p>
           <div class="mini-features"><span>Blue Lights</span><span>Playful Personality</span><span>Voice & Touch</span></div>
-          <div class="edition-bottom"><strong>₹9,999</strong><a href="checkout.html">Select Boy Edition</a></div>
+          <div class="edition-bottom"><strong>₹3,999</strong><a href="checkout.html?edition=boy" class="edition-link">Select Boy Edition</a></div>
         </div>
       </article>
-      <article class="edition glass pink">
-        <img src="assets/pet1.jpg" alt="Girl edition" />
+      <article class="edition glass pink edition-card" data-edition="girl">
+        <img src="girl-1.jpg" alt="Girl edition" />
         <div>
           <h3>AI PET – Girl Edition</h3>
           <p>Warm, cheerful and your caring desk buddy.</p>
           <div class="mini-features"><span>Soft Glow</span><span>Sweet Personality</span><span>Voice & Touch</span></div>
-          <div class="edition-bottom"><strong>₹9,999</strong><a href="checkout.html">Select Girl Edition</a></div>
+          <div class="edition-bottom"><strong>₹3,999</strong><a href="checkout.html?edition=girl" class="edition-link">Select Girl Edition</a></div>
         </div>
       </article>
+    </section>
+
+    <section id="gallery" class="section compact-top">
+      <div class="container gallery-head">
+        <h2 class="section-title">Amazon-Style Product Gallery</h2>
+        <p class="section-subtitle">Click Boy or Girl Edition, then click any thumbnail to change the main product image.</p>
+        <div class="edition-switcher">
+          <button class="switch-btn active" data-edition="boy">Boy Edition</button>
+          <button class="switch-btn" data-edition="girl">Girl Edition</button>
+        </div>
+      </div>
     </section>
 
     <section id="what" class="section">
@@ -114,45 +130,45 @@
               </ul>
             </div>
             <div class="box-items">
-              <img src="assets/pet1.jpg" alt="AI Pet in box" />
-              <div class="mini-box">Cable</div>
-              <div class="mini-box">Quick Guide</div>
-              <div class="mini-box">Welcome Card</div>
+              <img src="boy-2.jpg" alt="AI PET box image 1">
+              <img src="boy-3.jpg" alt="AI PET box image 2">
+              <img src="girl-2.jpg" alt="AI PET box image 3">
+              <img src="girl-3.jpg" alt="AI PET box image 4">
             </div>
           </div>
         </div>
         <div class="side-stack">
-          <div class="glass side-card"><h3>Warranty</h3><p>1-Year limited warranty against manufacturing defects and issues.</p></div>
-          <div class="glass side-card"><h3>Shipping</h3><p>Fast shipping. Orders ship within 24–48 hours and arrive in 3–7 business days.</p></div>
+          <div class="glass side-card"><h3>Warranty</h3><p>1-year limited warranty. We’ve got you covered against manufacturing defects and issues.</p></div>
+          <div class="glass side-card"><h3>Shipping</h3><p>Fast & free shipping. Orders ship within 24 hours and arrive in 3–5 business days.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="reviews" class="section compact-top">
+    <section id="reviews" class="section">
       <div class="container review-layout">
         <div>
-          <h2 class="section-title left">Loved by Thousands</h2>
+          <h2 class="section-title left">Loved by Thousands ★★★★★</h2>
           <div class="review-grid">
-            <article class="review-card glass"><div class="stars">★★★★★</div><p>AI PET keeps me company while I work and makes my day better. Super smart and so cute on my desk.</p><strong>Arjun P.</strong><span>Verified Buyer</span></article>
-            <article class="review-card glass"><div class="stars">★★★★★</div><p>The reminders and helpful answers are fantastic. I loved my routine in just a few days.</p><strong>Meera K.</strong><span>Verified Buyer</span></article>
-            <article class="review-card glass"><div class="stars">★★★★★</div><p>I got the edition for my daughter and she loves the glow quality, voice and support.</p><strong>David L.</strong><span>Verified Buyer</span></article>
+            <div class="glass review-card"><div class="stars">★★★★★</div><p>AI PET is amazing! It keeps me company while I work and makes my day better.</p><strong>Arjun P.</strong><span>Verified Buyer</span></div>
+            <div class="glass review-card"><div class="stars">★★★★★</div><p>The reminders and helpful answers are fantastic. Super cute and smart.</p><strong>Meera K.</strong><span>Verified Buyer</span></div>
+            <div class="glass review-card"><div class="stars">★★★★★</div><p>I got the Girl Edition for my daughter and she loves the glow and voice.</p><strong>David L.</strong><span>Verified Buyer</span></div>
           </div>
         </div>
         <div id="faq" class="glass faq-card">
           <h2>Frequently Asked Questions</h2>
-          <details open><summary>Does AI PET require an internet connection?</summary><p>Yes, internet is required for live AI chat, synced reminders and cloud-based responses.</p></details>
-          <details><summary>Can AI PET understand my voice?</summary><p>Yes, it is designed for voice interaction and natural conversational prompts.</p></details>
-          <details><summary>What languages does AI PET support?</summary><p>You can start with English-first support and expand languages later.</p></details>
-          <details><summary>Can I turn off the lights or sound?</summary><p>Yes, those controls can be added inside your device/app settings flow.</p></details>
-          <details><summary>What is the warranty policy?</summary><p>1-year limited warranty for manufacturing issues. Physical damage is usually excluded.</p></details>
+          <details open><summary>Does AI PET require an internet connection?</summary><p>Yes, internet is required for full AI features and real-time conversations.</p></details>
+          <details><summary>Can AI PET understand my voice?</summary><p>Yes, it supports voice interactions and can respond naturally.</p></details>
+          <details><summary>What languages does AI PET support?</summary><p>Support depends on the AI service configuration and future updates.</p></details>
+          <details><summary>Can I turn off the lights or sound?</summary><p>Yes, settings can be adjusted from the companion controls.</p></details>
+          <details><summary>What is the warranty policy?</summary><p>You get a 1-year limited warranty against manufacturing defects.</p></details>
         </div>
       </div>
     </section>
 
     <section class="section compact-top">
-      <div class="container cta glass">
+      <div class="container glass cta">
         <div class="cta-left">
-          <img src="assets/pet1.jpg" alt="AI Pet small" />
+          <img id="ctaImage" src="boy-4.jpg" alt="AI Pet CTA">
           <div>
             <h2>Ready to Bring Home Your AI Companion?</h2>
             <p>Join thousands of happy users and experience smart companionship every day.</p>
@@ -160,8 +176,8 @@
           </div>
         </div>
         <div class="cta-right">
-          <div class="price-row small"><strong>₹3,999</strong><span class="old">₹10,999</span><span class="save">Save ₹7,000</span></div>
-          <a class="buy-btn" href="checkout.html">Buy AI PET Now →</a>
+          <div class="price-row compact"><strong>₹3,999</strong><span class="old">₹10,999</span><span class="save">Save ₹7,000</span></div>
+          <a class="buy-btn full" id="ctaBuyBtn" href="checkout.html?edition=boy">Buy AI PET Now →</a>
         </div>
       </div>
     </section>
@@ -173,10 +189,12 @@
         <a href="index.html" class="logo"><span class="logo-dot">◉</span> AI PET</a>
         <p>Your smart desktop companion that talks, listens, learns and grows with you.</p>
       </div>
-      <div><h4>Shop</h4><a href="checkout.html">Buy Now</a><a href="#features">Shipping Info</a><a href="#faq">Warranty</a></div>
-      <div><h4>Support</h4><a href="#faq">Help Center</a><a href="success.html">Track Your Order</a><a href="https://wa.me/8357032880">Contact Us</a></div>
-      <div><h4>Company</h4><a href="#">About AI PET</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      <div><h4>Shop</h4><a href="checkout.html?edition=boy">Buy Now</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a></div>
+      <div><h4>Support</h4><a href="#">Shipping Info</a><a href="#">Returns & Refunds</a><a href="#">Contact Us</a></div>
+      <div><h4>Need Help?</h4><a href="https://wa.me/919999999999">WhatsApp Support</a><a href="mailto:support@aipet.com">support@aipet.com</a></div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
