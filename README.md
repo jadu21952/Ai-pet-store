@@ -35,6 +35,7 @@ And add this folder:
 
 ## Do not keep
 - `worker.js`
+- updated
 
 ## Notes
 - COD is removed.
