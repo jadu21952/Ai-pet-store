@@ -1,9 +1,38 @@
 const galleryData = {
-  boy: ["boy-1.jpg","boy-2.jpg","boy-3.jpg","boy-4.jpg","boy-5.jpg","boy-6.jpg"],
-  girl: ["girl-1.jpg","girl-2.jpg","girl-3.jpg","girl-4.jpg","girl-5.jpg","girl-6.jpg"]
+  boy: ["boy-1.jpg", "boy-2.jpg", "boy-3.jpg", "boy-4.jpg", "boy-5.jpg", "boy-6.jpg"],
+  girl: ["girl-1.jpg", "girl-2.jpg", "girl-3.jpg", "girl-4.jpg", "girl-5.jpg", "girl-6.jpg"]
 };
 
-function setEdition(edition){
+const boxData = {
+  boy: {
+    device: "boy-box-device.jpg",
+    cable: "boy-box-cable.jpg",
+    guide: "boy-box-guide.jpg",
+    card: "boy-box-card.jpg"
+  },
+  girl: {
+    device: "girl-box-device.jpg",
+    cable: "girl-box-cable.jpg",
+    guide: "girl-box-guide.jpg",
+    card: "girl-box-card.jpg"
+  }
+};
+
+function updateBoxImages(edition) {
+  const title = document.getElementById("boxEditionTitle");
+  const device = document.getElementById("boxDeviceImage");
+  const cable = document.getElementById("boxCableImage");
+  const guide = document.getElementById("boxGuideImage");
+  const card = document.getElementById("boxCardImage");
+
+  if (title) title.textContent = edition === "boy" ? "Boy Edition" : "Girl Edition";
+  if (device) device.src = boxData[edition].device;
+  if (cable) cable.src = boxData[edition].cable;
+  if (guide) guide.src = boxData[edition].guide;
+  if (card) card.src = boxData[edition].card;
+}
+
+function setEdition(edition) {
   const main = document.getElementById('mainProductImage');
   const thumbs = document.getElementById('thumbColumn');
   const heroBuyBtn = document.getElementById('heroBuyBtn');
@@ -18,21 +47,23 @@ function setEdition(edition){
   cards.forEach(card => card.classList.toggle('active', card.dataset.edition===edition));
   const links = document.querySelectorAll('.edition-link');
   links.forEach(link=>{ if(link.closest('[data-edition]')) link.href = `checkout.html?edition=${link.closest('[data-edition]').dataset.edition}`;});
-  if (!thumbs || !main) return;
-  thumbs.innerHTML = '';
-  galleryData[edition].forEach((img, idx) => {
-    const btn = document.createElement('button');
-    btn.className = 'thumb-btn' + (idx===0 ? ' active' : '');
-    btn.type = 'button';
-    btn.innerHTML = `<img src="${img}" alt="${edition} image ${idx+1}">`;
-    btn.addEventListener('click', () => {
-      main.src = img;
-      document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  if (thumbs && main) {
+    thumbs.innerHTML = '';
+    galleryData[edition].forEach((img, idx) => {
+      const btn = document.createElement('button');
+      btn.className = 'thumb-btn' + (idx===0 ? ' active' : '');
+      btn.type = 'button';
+      btn.innerHTML = `<img src="${img}" alt="${edition} image ${idx+1}">`;
+      btn.addEventListener('click', () => {
+        main.src = img;
+        document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+      thumbs.appendChild(btn);
     });
-    thumbs.appendChild(btn);
-  });
-  main.src = galleryData[edition][0];
+    main.src = galleryData[edition][0];
+  }
+  updateBoxImages(edition);
 }
 
 function setupLanding(){

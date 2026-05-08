@@ -33,3 +33,14 @@ Girl edition:
 npx wrangler login
 npx wrangler deploy
 ```
+
+
+Box image names:
+- boy-box-device.jpg
+- boy-box-cable.jpg
+- boy-box-guide.jpg
+- boy-box-card.jpg
+- girl-box-device.jpg
+- girl-box-cable.jpg
+- girl-box-guide.jpg
+- girl-box-card.jpg
