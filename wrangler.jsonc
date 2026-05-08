@@ -1,9 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "aipetstore-smart-features-payment",
-  "main": "worker.js",
+  "name": "ai-pet-store-pages",
   "compatibility_date": "2026-05-08",
-  "assets": {
-    "directory": "."
-  }
+  "pages_build_output_dir": "."
 }
