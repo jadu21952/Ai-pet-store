@@ -35,9 +35,10 @@ And add this folder:
 
 ## Do not keep
 - `worker.js`
-- updated
 
 ## Notes
 - COD is removed.
 - Payment starts only after the customer fills the checkout form and clicks **Proceed to Payment**.
 - This is configured for Razorpay **test mode**.
+
+Policy pages added: privacy-policy.html, terms-conditions.html, shipping-policy.html, refund-policy.html, contact-us.html
